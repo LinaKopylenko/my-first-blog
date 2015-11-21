@@ -7,28 +7,13 @@
                 <h1><a href="">Django Girls blog</a></h1>
             </div>
 
-            <div>
-                
-                
-                <h2><a href="http://www.businessinsider.com/15-facts-about-under-armour-history-name-2015-11">15 surprising facts about Under Armour</a></h2>
-                <p>The sports apparel brand Under Armour is booming, with the company on track to generate around $4 billion in revenue this year.</p>
+            {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaks }}</p>
+        </div>
+    {% endfor %}
 
-                <p>Its market share has skyrocketed in the US, partly thanks to memorable marketing campaigns and the company's knack of picking spokesmodels just as they are about to reach the top of their game: Misty Copeland, Stephen Curry, and Tom Brady to name a few.</p>
-            </div>
-            <div>
-                <p>published: 14.06.2014, 12:14</p>
-                <h2><a href="">A 62-story 'vertical village' is coming to London — here's what it looks like</a></h2>
-                <p>London is going through a skyscraper boom.</p>
-
-                <p>Buildings like the Shard, Walkie-Talkie, and the Cheesegrater have all sprung up over the last few years and there are an estimated 230 new towers over 20 stories tall planned across the capital.</p>
-
-                <p>Now there's another one to add to the list — 22 Bishopsgate. The 62-storey tower planned for east London on Tuesday gained planning permission from the City of London.</p>
-
-                <p>22 Bishopsgate will take a leaf out of nearby Tower 42's book and mix office space with restaurants and shops. It will also the highest free-to-visit public space in London.</p>
-
-                <p>AXA Real Estate, which is behind the plans, claims in an email sent out Tuesday that the building will be "the City’s first vertical village." Design and architecture website Dezeen reported back in July:</p>
-
-                <p>The lobby will feature a cultural programme of art installations and theatre performances, while the lower floors will provide shops and services for tenants including restaurants, doctors, dry cleaners and grocers.</p>
-            </div>
         </body>
     </html>
